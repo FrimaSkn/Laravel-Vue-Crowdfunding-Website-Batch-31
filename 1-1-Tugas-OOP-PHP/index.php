@@ -1,0 +1,111 @@
+<?php 
+    trait Hewan 
+    {
+        public $nama;
+        public $darah = 50;
+        public $jumlahKaki;
+        public $keahlian;
+
+        public function atraksi() {
+            echo "$this->nama sedang $this->keahlian";
+        }
+
+        
+
+
+    }
+      
+    trait Fight 
+    {
+        public $attackPower;
+        public $defencePower;
+
+        public function serang($serang) 
+        {
+            self::diserang($serang);
+            echo "$serang->nama sedang menyerang $this->nama";
+        }
+
+        public function diserang($serang)
+        {
+            return $this->darah = $this->darah - ($serang->attackPower / $this->deffencePower);
+            
+        }
+
+    }
+
+
+
+      class Harimau 
+      {
+        use Hewan, Fight;
+
+        public function __construct($nama)
+        {
+            $this->nama = $nama;
+            $this->darah;
+            $this->jumlahKaki = 4;
+            $this->keahlian = "lari cepat";
+            $this->attackPower = 7;
+            $this->deffencePower  = 8;
+        }
+
+        public function getInfoHewan()
+        {
+            echo "Jenis Hewan = " . $this->nama; echo PHP_EOL;
+            echo "Darah = " . $this->darah; echo PHP_EOL;
+            echo "Jumlah Kaki = " . $this->jumlahKaki; echo PHP_EOL;
+            echo "Keahlian = " . $this->keahlian; echo PHP_EOL;
+            echo "attackPower = " . $this->attackPower; echo PHP_EOL;
+            echo "deffencePower = " . $this->deffencePower;
+        }
+        
+      }
+
+      class Elang 
+      {
+        use Hewan, Fight;
+
+        public function __construct($nama)
+        {
+            $this->nama = $nama;
+            $this->darah;
+            $this->jumlahKaki = 2;
+            $this->keahlian = "Terbang Tinggi";
+            $this->attackPower = 10;
+            $this->deffencePower  = 5;
+        }
+
+        public function getInfoHewan()
+        {
+            echo "Jenis Hewan = " . $this->nama; echo PHP_EOL;
+            echo "Darah = " . $this->darah; echo PHP_EOL;
+            echo "Jumlah Kaki = " . $this->jumlahKaki; echo PHP_EOL;
+            echo "Keahlian = " . $this->keahlian; echo PHP_EOL;
+            echo "attackPower = " . $this->attackPower; echo PHP_EOL;
+            echo "deffencePower = " . $this->deffencePower;
+        }
+        
+      }
+      $elang = new Elang("Elang");
+      $harimau = new Harimau("Harimau");
+
+      echo PHP_EOL; 
+      $harimau->serang($elang);
+      echo PHP_EOL;
+      $harimau->atraksi();
+      echo PHP_EOL; 
+      $harimau->getInfoHewan();
+
+      echo PHP_EOL; echo PHP_EOL;
+      echo "=========================================";
+      echo PHP_EOL; echo PHP_EOL;
+
+      $elang->serang($harimau);
+      echo PHP_EOL; 
+      $elang->atraksi();
+      echo PHP_EOL; 
+      $elang->getInfoHewan();
+      echo PHP_EOL; 
+
+?>
