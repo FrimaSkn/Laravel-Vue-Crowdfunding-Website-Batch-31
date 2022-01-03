@@ -84,7 +84,7 @@
         
       }
 
-      
+
       $elang = new Elang();
       $harimau = new Harimau();
 
@@ -95,9 +95,9 @@
       echo PHP_EOL; 
       $harimau->getInfoHewan();
 
-      echo PHP_EOL; echo PHP_EOL;
+      echo PHP_EOL . PHP_EOL;
       echo "=========================================";
-      echo PHP_EOL; echo PHP_EOL;
+      echo PHP_EOL . PHP_EOL;
 
       $elang->serang($harimau);
       echo PHP_EOL; 
