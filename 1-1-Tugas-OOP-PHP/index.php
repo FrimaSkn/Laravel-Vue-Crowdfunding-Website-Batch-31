@@ -52,11 +52,11 @@
 
         public function getInfoHewan()
         {
-            echo "Jenis Hewan = " . $this->nama; echo PHP_EOL;
-            echo "Darah = " . $this->darah; echo PHP_EOL;
-            echo "Jumlah Kaki = " . $this->jumlahKaki; echo PHP_EOL;
-            echo "Keahlian = " . $this->keahlian; echo PHP_EOL;
-            echo "attackPower = " . $this->attackPower; echo PHP_EOL;
+            echo "Jenis Hewan = " . $this->nama . PHP_EOL;
+            echo "Darah = " . $this->darah . PHP_EOL;
+            echo "Jumlah Kaki = " . $this->jumlahKaki . PHP_EOL;
+            echo "Keahlian = " . $this->keahlian . PHP_EOL;
+            echo "attackPower = " . $this->attackPower . PHP_EOL;
             echo "deffencePower = " . $this->deffencePower;
         }
         
@@ -78,11 +78,11 @@
 
         public function getInfoHewan()
         {
-            echo "Jenis Hewan = " . $this->nama; echo PHP_EOL;
-            echo "Darah = " . $this->darah; echo PHP_EOL;
-            echo "Jumlah Kaki = " . $this->jumlahKaki; echo PHP_EOL;
-            echo "Keahlian = " . $this->keahlian; echo PHP_EOL;
-            echo "attackPower = " . $this->attackPower; echo PHP_EOL;
+            echo "Jenis Hewan = " . $this->nama . PHP_EOL;
+            echo "Darah = " . $this->darah . PHP_EOL;
+            echo "Jumlah Kaki = " . $this->jumlahKaki . PHP_EOL;
+            echo "Keahlian = " . $this->keahlian . PHP_EOL;
+            echo "attackPower = " . $this->attackPower . PHP_EOL;
             echo "deffencePower = " . $this->deffencePower;
         }
         
