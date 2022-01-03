@@ -9,10 +9,6 @@
         public function atraksi() {
             echo "$this->nama sedang $this->keahlian";
         }
-
-        
-
-
     }
       
     trait Fight 
@@ -87,6 +83,8 @@
         }
         
       }
+
+      
       $elang = new Elang();
       $harimau = new Harimau();
 
