@@ -40,9 +40,9 @@
       {
         use Hewan, Fight;
 
-        public function __construct($nama)
+        public function __construct()
         {
-            $this->nama = $nama;
+            $this->nama = "Harimau";
             $this->darah;
             $this->jumlahKaki = 4;
             $this->keahlian = "lari cepat";
@@ -66,9 +66,9 @@
       {
         use Hewan, Fight;
 
-        public function __construct($nama)
+        public function __construct()
         {
-            $this->nama = $nama;
+            $this->nama = "Elang";
             $this->darah;
             $this->jumlahKaki = 2;
             $this->keahlian = "Terbang Tinggi";
@@ -87,8 +87,8 @@
         }
         
       }
-      $elang = new Elang("Elang");
-      $harimau = new Harimau("Harimau");
+      $elang = new Elang();
+      $harimau = new Harimau();
 
       echo PHP_EOL; 
       $harimau->serang($elang);
