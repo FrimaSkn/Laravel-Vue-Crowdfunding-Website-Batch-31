@@ -43,7 +43,7 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    protected function get_role_id()
+    protected function getRoleId()
     {
         $role = Role::where('name', 'user')->first();
         return $role->id;
@@ -60,7 +60,7 @@ class User extends Authenticatable
         });
 
         static::creating(function ($model) {
-            $model->role_id = $model->get_role_id();
+            $model->role_id = $model->getRoleId();
         });
     }
 
