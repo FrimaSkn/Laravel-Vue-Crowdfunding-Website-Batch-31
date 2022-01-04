@@ -22,9 +22,9 @@
             echo "$serang->nama sedang menyerang $this->nama";
         }
 
-        public function diserang($serang)
+        public function diserang($diserang)
         {
-            return $this->darah = $this->darah - ($serang->attackPower / $this->deffencePower);
+            return $this->darah = $this->darah - ($diserang->attackPower / $this->deffencePower);
             
         }
 
