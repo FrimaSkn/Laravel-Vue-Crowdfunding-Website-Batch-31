@@ -1,5 +1,7 @@
 <?php
 
+use App\User;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,3 +16,12 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/route-1', function () {
+    return "email verified ";
+})->middleware('email_verified');
+
+Route::get('/route-2', function () {
+    return "email verified dan anda adalah admin";
+})->middleware('admin');
+
