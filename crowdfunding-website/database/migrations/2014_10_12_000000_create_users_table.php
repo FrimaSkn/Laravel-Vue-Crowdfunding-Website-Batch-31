@@ -17,9 +17,11 @@ class CreateUsersTable extends Migration
             $table->uuid('id')->primary();
             $table->uuid('role_id')->default(false);
             $table->string('name');
+            $table->string('username', 25)->unique()->nullable();
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->string('photo_profile')->nullable();
             $table->rememberToken();
             $table->foreign('role_id')->references('id')->on('roles');
             $table->timestamps();

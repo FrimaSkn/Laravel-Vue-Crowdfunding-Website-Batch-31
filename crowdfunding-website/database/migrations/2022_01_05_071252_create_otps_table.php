@@ -17,6 +17,7 @@ class CreateOtpsTable extends Migration
             $table->uuid('id');
             $table->integer('otp');
             $table->uuid('user_id');
+            $table->dateTime('valid_until');
             $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });

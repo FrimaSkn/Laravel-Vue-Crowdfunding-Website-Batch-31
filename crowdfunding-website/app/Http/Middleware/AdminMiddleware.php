@@ -20,6 +20,8 @@ class AdminMiddleware
             return $next($request);
         }
 
-        abort(403);
+        return response()->json([
+            'message' => 'Anda Bukan Admin',
+        ]);
     }
 }

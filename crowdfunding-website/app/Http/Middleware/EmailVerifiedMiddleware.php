@@ -20,6 +20,8 @@ class EmailVerifiedMiddleware
             return $next($request);
         }
 
-        abort(403);
+        return response()->json([
+            'message' => 'Email anda belum terverifikasi',
+        ]);
     }
 }
