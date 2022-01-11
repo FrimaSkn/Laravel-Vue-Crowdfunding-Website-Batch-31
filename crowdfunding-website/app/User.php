@@ -90,9 +90,9 @@ class User extends Authenticatable implements JWTSubject
 
         $current = Carbon::now();
 
-        $otpcode = Otp::updateOrCreate([
-            'user_id' => $this->id,
-            'otp' => $random, 
+        $otpcode = Otp::updateOrCreate(
+            ['user_id' => $this->id],
+            ['otp' => $random, 
             'valid_until' => $current->addMinutes(5)
             ]);
     }

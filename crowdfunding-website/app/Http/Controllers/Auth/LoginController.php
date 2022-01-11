@@ -27,9 +27,9 @@ class LoginController extends Controller
         }
 
         $data['token'] = $token;
+
         $data['user'] = auth()->user();
-
-
+        
         if($data['user']->email_verified_at != null){
             return response()->json([
                 'response_code' => '00',

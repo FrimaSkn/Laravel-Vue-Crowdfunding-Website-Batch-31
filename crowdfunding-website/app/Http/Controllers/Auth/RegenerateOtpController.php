@@ -3,8 +3,8 @@
 namespace App\Http\Controllers\Auth;
 
 use App\User;
-use App\Events\UserRegister;
 use Illuminate\Http\Request;
+use App\Events\UserRegistered;
 use App\Http\Controllers\Controller;
 
 class RegenerateOtpController extends Controller
@@ -24,8 +24,10 @@ class RegenerateOtpController extends Controller
         $user = User::where('email', $request->email)->first();
 
         $user->generateCodeOtp();
-
+        
         $data['user'] = $user;
+        
+        event(new UserRegistered($user, 'regenerate'));
 
         return response()->json([
             'response_code' => '00',
