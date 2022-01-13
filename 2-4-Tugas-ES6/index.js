@@ -2,16 +2,16 @@
 
 //Jawaban Soal 1
 const persegiPanjang = (luas, panjang) => {
-  let rumsuLuas = luas * panjang
+  let rumusLuas = luas * panjang
   let rumusKeliling = (2 * luas) + (2 * panjang)
   return {
-    rumsuLuas,
+    rumusLuas,
     rumusKeliling
   }
   
 }
 
-console.log(persegiPanjang(5, 15).rumsuLuas)
+console.log(persegiPanjang(5, 15).rumusLuas)
 console.log(persegiPanjang(5, 10).rumusKeliling)
 
 
