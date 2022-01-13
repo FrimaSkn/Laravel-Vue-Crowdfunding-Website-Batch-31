@@ -1,18 +1,18 @@
 // soal 1 buatlah fungsi menggunakan arrow function luas dan keliling persegi panjang dengan arrow function lalu gunakan let atau const di dalam soal ini
 
 //Jawaban Soal 1
-const luas = (p, l) => {
-    let rumus = p * l;
-    return `${rumus} cm`;
+const persegiPanjang = (luas, panajang) => {
+  let rumsuLuas = luas * panajang
+  let rumusKeliling = (2 * luas) + (2 * panajang)
+  return {
+    rumsuLuas,
+    rumusKeliling
+  }
+  
 }
 
-const keliling = (p, l) => {
-    let rumus = (2 * p) + (2 * l); 
-    return `${rumus} cm`;
-}
-
-console.log(luas(15, 9))
-console.log(keliling(8, 4))
+console.log(persegiPanjang(5, 5).rumsuLuas)
+console.log(persegiPanjang(5, 5).rumusKeliling)
 
 
 //soal 2 
