@@ -1,9 +1,9 @@
 // soal 1 buatlah fungsi menggunakan arrow function luas dan keliling persegi panjang dengan arrow function lalu gunakan let atau const di dalam soal ini
 
 //Jawaban Soal 1
-const persegiPanjang = (luas, panajang) => {
-  let rumsuLuas = luas * panajang
-  let rumusKeliling = (2 * luas) + (2 * panajang)
+const persegiPanjang = (luas, panjang) => {
+  let rumsuLuas = luas * panjang
+  let rumusKeliling = (2 * luas) + (2 * panjang)
   return {
     rumsuLuas,
     rumusKeliling
