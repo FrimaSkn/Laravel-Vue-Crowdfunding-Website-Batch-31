@@ -11,8 +11,8 @@ const persegiPanjang = (luas, panjang) => {
   
 }
 
-console.log(persegiPanjang(5, 5).rumsuLuas)
-console.log(persegiPanjang(5, 5).rumusKeliling)
+console.log(persegiPanjang(5, 15).rumsuLuas)
+console.log(persegiPanjang(5, 10).rumusKeliling)
 
 
 //soal 2 
