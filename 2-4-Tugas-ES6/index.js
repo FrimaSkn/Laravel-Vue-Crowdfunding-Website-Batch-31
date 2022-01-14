@@ -3,7 +3,7 @@
 //Jawaban Soal 1
 const persegiPanjang = (luas, panjang) => {
   let rumusLuas = luas * panjang
-  let rumusKeliling = (2 * luas) + (2 * panjang)
+  let rumusKeliling = 2 * (luas + panjang)
   return {
     rumusLuas,
     rumusKeliling
