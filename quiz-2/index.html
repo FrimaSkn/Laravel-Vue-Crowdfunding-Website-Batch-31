@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+</head>
+<body>
+  <div id="app">
+    <input type="text" v-model="inputUser">
+
+    <button @Click="add">{{ button }}</button>
+    
+    <div v-for="(user, index) in users" :key="index">
+      <ul>
+        <li>{{ user.name }}  ||  <button @Click="edit(index)">edit</button> || <button @Click="deleteUser(index)">delete</button></li>
+      </ul>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <script>
+   var vm = new Vue({
+      el: '#app',
+      data: {
+        inputUser: '',
+        button : 'Add',
+        id: null,
+        users : [
+        {
+          'name' : 'Muhamamd Iqbal Mubarok'
+        },
+        
+        {
+          'name' : 'Tuby Purwanti'
+        },
+        
+        {
+          'name' : 'Faqih Muhammad'
+        },
+        
+        ]
+      },
+
+      methods : {
+        add : function(){
+
+        if(this.id != null){
+            this.users[this.id].name = this.inputUser
+            this.id = null
+            
+        }else {
+          this.users.push({ name: this.inputUser })
+        }
+          this.inputUser = ''
+          this.button = "Add"
+        },
+
+        edit: function(e){
+          this.id = e
+          this.inputUser = this.users[e].name
+          this.button = "update"
+
+        },
+
+        deleteUser : function(e){
+            if (confirm("Anda Yakin ?") == true){
+            this.users.splice(e, 1);
+            }
+        }
+      }
+  })
+  </script>
+</body>
+</html>
