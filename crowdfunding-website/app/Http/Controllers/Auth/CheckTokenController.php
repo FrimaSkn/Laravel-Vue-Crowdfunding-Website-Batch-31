@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers\Auth;
 
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\Request;
 
-class LogoutController extends Controller
+class CheckTokenController extends Controller
 {
     /**
      * Handle the incoming request.
@@ -16,11 +15,10 @@ class LogoutController extends Controller
      */
     public function __invoke(Request $request)
     {
-        Auth::logout();
-
         return response()->json([
-            'response' => '00',
-            'massage' => 'User berhasil logout'
+            'response' =>  '00',
+            'message' => 'token valid',
+            'data' => true
         ], 200);
     }
 }

@@ -11,9 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/{any?}', function () {
+//     return view('app');
+// })->where('any', '.*');
 
 Route::get('/route-1', function () {
     return "email verified";
@@ -23,3 +23,4 @@ Route::get('/route-2', function () {
     return "email verified dan anda adalah admin";
 })->middleware('admin', 'email_verified');
 
+Route::view('/{any?}', 'app')->where('any', '.*');
